@@ -1,0 +1,29 @@
+
+    <section layout="row" layout-sm="column" layout-align="center center" layout-wrap>
+      <md-input-container class="md-icon-float md-block">
+      <!-- Use floating label instead of placeholder -->
+      <label>Buscar</label>
+     
+      <input  ng-model="busqueda.texto"  ng-keyup="buscar(busqueda.texto)" type="text">
+    </md-input-container>
+
+
+    </section>
+
+     <div class='md-padding' layout="row" flex>
+     <div layout="row" flex   >
+        <div class="parent" layout="column" ng-repeat="data in lista" flex>
+        <md-card flex flex-gt-md="5"  ng-click="cargarSeleccionado(data.imdbID)">
+        <img  src="{{data.Poster}}" alt="Washed Out">
+        <md-card-title>
+          <md-card-title-text>
+            <span class="md-headline">  {{data.Title}}	</span>
+          </md-card-title-text>
+        </md-card-title>
+       
+       
+      </md-card>
+        </div>
+     </div>
+  </div>
+

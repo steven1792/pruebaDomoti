@@ -1,0 +1,34 @@
+<md-dialog  style="width:60%;height:80%;" aria-label="Mango (Fruit)"  ng-cloak>
+  <form>
+    <md-toolbar>
+      <div class="md-toolbar-tools">
+        <h2>{{seleccionado.Title}}</h2>
+        <span flex></span>
+        <md-button class="md-icon-button" ng-click="cancel()">
+          <md-icon md-svg-src="img/icons/ic_close_24px.svg" aria-label="Close dialog"></md-icon>
+        </md-button>
+      </div>
+    </md-toolbar>
+    <md-dialog-content>
+      <div class="md-dialog-content">
+      <center>
+       <img style="margin: auto; max-width: 100%;" alt="Lush mango tree" src="{{seleccionado.Poster}}">
+       </center>
+        
+        <p>
+         {{seleccionado.Plot}}
+        </p>
+       
+       
+      </div>
+    </md-dialog-content>
+    <md-dialog-actions layout="row">
+    
+      <span flex></span>
+   
+      <md-button ng-click="answer('useful')">
+        Volver
+      </md-button>
+    </md-dialog-actions>
+  </form>
+</md-dialog>
